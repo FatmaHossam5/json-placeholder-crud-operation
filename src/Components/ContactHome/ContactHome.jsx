@@ -137,8 +137,8 @@ export default function ContactHome() {
         {/* Content Header (Page header) */}
         <section className="content-header">
           <div className="container-fluid">
-            <div className=" mb-2 ">
-              <div className=" w-100 d-flex justify-content-between align-items-center">
+            <div className="row mb-2 ">
+              <div className="row w-100 d-flex justify-content-between align-items-center">
                 <div className='col-4'>
                   <h1>Contacts</h1>
                 </div>
@@ -165,7 +165,7 @@ export default function ContactHome() {
           {/* Default box */}
           <div className="card card-solid">
             <div className="card-body pb-0">
-              <div className="d-flex">
+              <div className="row">
                 {(
                   currentContacts.map((contact, idx) =>
                     <div key={idx} className="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column ">
@@ -173,7 +173,7 @@ export default function ContactHome() {
                         <div className="card-header text-muted border-bottom-0">
                           {contact?.company?.name}              </div>
                         <div className="card-body pt-0">
-                          <div className="d-flex">
+                          <div className="row">
                             <div className="col-7">
                               <h2 className="lead"><b>{contact?.name}</b></h2>
                               <p className="text-muted text-sm"><b>userName: </b>{contact?.username} </p>
@@ -237,7 +237,7 @@ export default function ContactHome() {
             <div className="modal-body text-center">
               <form onSubmit={handleSubmit(editContact)} >
                 <div className="card-body ">
-                  <div className='form-group   d-flex justify-content-between align-items-center ' >
+                  <div className='form-group row  d-flex justify-content-between align-items-center ' >
                     <div className='col-md-6 py-0'>
                       <label htmlFor="exampleInputUserName " className=''>UserName</label>
                       <input type="text" className={`form-control ${!errors?.username ? ' border border-info' : ' border border-danger'}`} id="exampleInputUserName" placeholder="Enter userName"
@@ -269,7 +269,7 @@ export default function ContactHome() {
 
                   </div>
 
-                  <div className="form-group   d-flex justify-content-between align-items-center">
+                  <div className="form-group row  d-flex justify-content-between align-items-center">
 
                     <div className="col-md-6  py-0 ">
                       <label htmlFor="exampleInputAddress">Address</label>
@@ -311,7 +311,7 @@ export default function ContactHome() {
 
                     </div>
                   </div>
-                  <div className="form-group  d-flex justify-content-between align-items-center">
+                  <div className="form-group row  d-flex justify-content-between align-items-center">
                     <div className="col-md-6 py-0">
                       <label htmlFor="exampleInputAddress">Phone</label>
                       <input type="text" className={`form-control ${!errors.phone ? ' border border-info' : ' border border-danger'}`} id="exampleInputAddress" placeholder="Phone"
@@ -342,7 +342,7 @@ export default function ContactHome() {
                 </div>
                 {/* /.card-body */}
                 <div className="modal-footer justify-content-between">
-                  <button type="button" className="btn btn-danger" onClick={handleClose}>Close</button>
+                  <button type="button" className="btn btn-default" onClick={handleClose}>Close</button>
 
                   <button type="submit" className="btn btn-primary">Submit</button>
 

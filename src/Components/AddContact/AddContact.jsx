@@ -31,7 +31,7 @@ export default function AddContact() {
     <>
      <section className="content">
   <div className="container-fluid">
-    <div className="row">
+    <div className="d-flex">
       {/* left column */}
       <div className="col-md-8 m-auto py-4">
         {/* general form elements */}
@@ -45,7 +45,7 @@ export default function AddContact() {
           <form onSubmit={handleSubmit(AddContact)}>
        
             <div className="card-body ">
-              <div className='form-group row  d-flex justify-content-between align-items-center ' >
+              <div className='form-group   d-flex justify-content-between align-items-center ' >
                 <div className='col-md-6 py-0'>
                 <label htmlFor="exampleInputUserName " className=''>UserName</label>
                 <input type="text" className={`form-control ${!errors?.username?' border border-info':' border border-danger'}`} id="exampleInputUserName" placeholder="Enter userName"
@@ -80,7 +80,7 @@ export default function AddContact() {
            
               </div>
      
-              <div className="form-group row  d-flex justify-content-between align-items-center">
+              <div className="form-group   d-flex justify-content-between align-items-center">
                 
               <div className="col-md-6  py-0 ">
               <label htmlFor="exampleInputAddress">Address</label>
@@ -121,7 +121,7 @@ export default function AddContact() {
                 
               </div>
               </div>
-          <div className="form-group row  d-flex justify-content-between align-items-center">
+          <div className="form-group   d-flex justify-content-between align-items-center">
               <div className="col-md-6 py-0">
                 <label htmlFor="exampleInputAddress">Phone</label>
                 <input type="text" className={`form-control ${!errors.phone?' border border-info':' border border-danger'}`} id="exampleInputAddress" placeholder="Phone"

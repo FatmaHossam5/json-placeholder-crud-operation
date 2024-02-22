@@ -68,6 +68,10 @@ export default function ContactHome() {
 
       setUpdateModal(false);
     }
+    const backdrop = document.querySelector('.modal-backdrop');
+    if (backdrop) {
+      backdrop.parentNode.removeChild(backdrop);
+    }
   };
 
   {/* handle Delete Contact */ }

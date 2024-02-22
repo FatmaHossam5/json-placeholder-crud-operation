@@ -16,14 +16,13 @@ export default function AddContact() {
 
 
       toast.success(`${response.status} Created SuccessFully!`)
-      setTimeout(()=>{
+      setIsLoading(false);
+     
         navigate('/')
-      },1000)
+     
     
     }).catch((error)=>{
      toast.error(error.message)
-    }).finally(() => {
-      setIsLoading(false);
     })
   }
 
